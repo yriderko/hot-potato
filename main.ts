@@ -18,9 +18,9 @@ input.onButtonPressed(Button.AB, function () {
         basic.showNumber(timer)
         timer += -1
         if (timer < 10) {
-            music.ringTone(349)
+            music.playTone(262, music.beat(BeatFraction.Half))
         }
-        basic.pause(1000)
+        basic.pause(500)
     }
     basic.showNumber(0)
     basic.clearScreen()
@@ -41,7 +41,7 @@ input.onButtonPressed(Button.B, function () {
     basic.showNumber(timer)
     basic.clearScreen()
 })
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
     otro += 1
     basic.showNumber(otro)
 })
